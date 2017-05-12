@@ -1,1 +1,1 @@
-This is a prime checker app
+This is a prime number checker app
