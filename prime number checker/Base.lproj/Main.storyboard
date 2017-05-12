@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="prime_number_checker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prime Number Checker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL7-2N-gdl">
+                                <rect key="frame" x="98" y="28" width="179" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter your Number in the text field" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTW-S0-m7I">
+                                <rect key="frame" x="29" y="65" width="317" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g. 4, 7" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1qq-iw-0gn">
+                                <rect key="frame" x="16" y="221" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="n9U-P4-jKg"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-n2-Hn0">
+                                <rect key="frame" x="164" y="277" width="46" height="30"/>
+                                <state key="normal" title="Check"/>
+                                <connections>
+                                    <action selector="primeNumberCheck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HmQ-83-UQI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is it prime?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUJ-rE-Bf8">
+                                <rect key="frame" x="16" y="407" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wTW-S0-m7I" secondAttribute="trailing" constant="13" id="6aY-E1-awx"/>
+                            <constraint firstItem="wTW-S0-m7I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="9H4-gD-71m"/>
+                            <constraint firstItem="wTW-S0-m7I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9dR-zb-JZC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OUJ-rE-Bf8" secondAttribute="trailing" id="Bzf-Fa-9Ug"/>
+                            <constraint firstItem="OUJ-rE-Bf8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EE5-n2-Hn0" secondAttribute="bottom" constant="1" id="Kdm-9T-TRO"/>
+                            <constraint firstItem="EE5-n2-Hn0" firstAttribute="top" secondItem="1qq-iw-0gn" secondAttribute="bottom" constant="26" id="MDx-tr-0Hg"/>
+                            <constraint firstItem="OUJ-rE-Bf8" firstAttribute="top" secondItem="EE5-n2-Hn0" secondAttribute="bottom" priority="250" constant="100" id="QMA-20-xlQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EE5-n2-Hn0" secondAttribute="trailing" constant="149" id="aD6-WF-DtL"/>
+                            <constraint firstItem="EE5-n2-Hn0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="148" id="bAd-zS-CDa"/>
+                            <constraint firstItem="wTW-S0-m7I" firstAttribute="top" secondItem="GL7-2N-gdl" secondAttribute="bottom" constant="16" id="cmQ-Cv-oNZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OUJ-rE-Bf8" secondAttribute="bottom" constant="10" id="hht-r1-QQT"/>
+                            <constraint firstItem="1qq-iw-0gn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jEH-QI-FPS"/>
+                            <constraint firstItem="1qq-iw-0gn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="k5h-Xu-fpm"/>
+                            <constraint firstItem="GL7-2N-gdl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nYZ-AO-gLq"/>
+                            <constraint firstItem="1qq-iw-0gn" firstAttribute="top" secondItem="wTW-S0-m7I" secondAttribute="bottom" constant="135" id="q6j-18-Sry"/>
+                            <constraint firstItem="GL7-2N-gdl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="qvA-sO-PD6"/>
+                            <constraint firstItem="OUJ-rE-Bf8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uMl-mS-cyI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myUIView" destination="8bC-Xf-vdC" id="FwF-5Q-WBa"/>
+                        <outlet property="primeNumberTextField" destination="1qq-iw-0gn" id="sqp-0i-Bia"/>
+                        <outlet property="resultLabel" destination="OUJ-rE-Bf8" id="inK-kg-2PU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
